@@ -1,0 +1,10 @@
+fastapi
+uvicorn[standard]
+langchain
+langchain-openai
+langchain-anthropic
+transformers
+torch
+psycopg2-binary
+redis
+python-dotenv

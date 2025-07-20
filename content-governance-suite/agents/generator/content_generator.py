@@ -60,9 +60,9 @@ class ContentGeneratorAgent(BaseAgent):
             text_splitter = RecursiveCharacterTextSplitter(
                 chunk_size=1000, chunk_overlap=200)
             splits = text_splitter.split_documents(documents)
-
+            
             self.knowledge_base = FAISS.from_documents(splits, self.embeddings)
-    
+            
             for doc_path in docs:
                 if os.path.exists(doc_path):
                     os.remove(doc_path)
